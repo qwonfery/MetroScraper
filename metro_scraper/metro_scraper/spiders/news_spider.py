@@ -8,7 +8,7 @@ PAGE_NUMBER = 20
 
 class Spider(scrapy.Spider):
     name = "metro_news_spider"
-    start_urls = [f"{BASE_URL}category/sladosti_/konfety-podarochnye-nabory?page={i}&in_stock=1" for i in range(1, 2)]
+    start_urls = [f"{BASE_URL}category/sladosti_/konfety-podarochnye-nabory?page={i}&in_stock=1" for i in range(1, PAGE_NUMBER)]
 
     def parse(self, response):
         products_links = response.css('#products-wrapper a::attr(href)').getall()

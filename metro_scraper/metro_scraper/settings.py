@@ -12,10 +12,6 @@ USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
-ITEM_PIPELINES = {
-   "metro_scraper.pipelines.MetroScraperPipeline": 300,
-}
-
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
